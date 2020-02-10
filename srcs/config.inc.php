@@ -29,6 +29,6 @@ $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
-/* down and upload directories */
+/* Up and download directories */
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
