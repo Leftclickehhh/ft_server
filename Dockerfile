@@ -7,8 +7,8 @@ RUN apt-get -y install php7.3 php-mysql php-fpm php-cli php-mbstring
 COPY ./srcs/start.sh /var/
 COPY ./srcs/mysql_setup.sql /var/
 COPY ./srcs/wordpress.sql /var/
+COPY ./srcs/indexswap.sh /var/
 COPY ./srcs/nginx.conf /etc/nginx/sites-available/localhost
-COPY ./srcs/nginxindexoff.conf /var/
 RUN ln -s /etc/nginx/sites-available/localhost /etc/nginx/sites-enabled/localhost
 
 WORKDIR /var/www/html/
