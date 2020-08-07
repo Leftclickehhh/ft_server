@@ -22,8 +22,6 @@ RUN chmod 755 -R wordpress
 
 RUN service mysql start && mysql -u root mysql < /var/mysql_setup.sql && mysql wordpress -u root --password= < /var/wordpress.sql
 RUN openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=localhost' -keyout /etc/ssl/certs/localhost.key -out /etc/ssl/certs/localhost.crt
-# rewrite this line
 RUN chown -R www-data:www-data *
-RUN chmod 755 -R *
-# is this line needed?
+
 CMD bash /var/start.sh && tail -f /dev/null
