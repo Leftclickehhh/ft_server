@@ -27,7 +27,7 @@ RUN mv wp-config.php wordpress/
 
 RUN service mysql start && mysql < /var/mysql_setup.sql &&\
     mysql wordpress -u sde-kok --password=password < /var/www/html/wordpress.sql \
-    mysql phpmyadmin < < var/www/html/phpmyadmin/sql/create_tables.sql
+    mysql phpmyadmin < var/www/html/phpmyadmin/sql/create_tables.sql
 
 RUN service mysql start && \
     wp core install --allow-root --path="/var/www/html/wordpress" --url="https://localhost/wordpress" --title="sde-kok" --admin_user="sde-kok" --admin_password="password" --admin_email="sde-kok@student.codam.nl"
