@@ -28,6 +28,8 @@ $cfg['Servers'][$i]['auth_type'] = 'cookie';
 $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
+$cfg['Servers'][$i]['controluser'] = 'sde-kok';
+$cfg['Servers'][$i]['controlpass'] = 'password';
 
 /* Up and download directories */
 $cfg['UploadDir'] = '';
